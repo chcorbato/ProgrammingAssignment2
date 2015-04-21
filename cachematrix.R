@@ -46,12 +46,12 @@ cacheSolve <- function(x, ...) {
     # if a value has been retrieved, then return it because we had it cached
     if(!is.null(inv)) {
         message("getting cached data")
-        return inv
+        return(inv)
     }
     
     # otherwise get the matrix, compute the inverse, store it and return it
     data <- x$get()
-    inv <- solve(x)
+    inv <- solve(data)
     x$setinv(inv)
     inv
 }
