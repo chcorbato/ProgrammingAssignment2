@@ -1,7 +1,10 @@
 ## Put comments here that give an overall description of what your
-## functions do
+## functions do:
+## this pair of functions optimize the computation of the inverse of a matrix by caching
+## the result, so it can be used without recalculating the inverse if it is used several times.
+## It makes use of the R scoping rules to preserve the state inside the R object
 
-## Write a short comment describing this function
+## Write a short comment describing this function:
 ## This function creates a special 'matrix' object which is actually a list with functions to:
 ##      1. set the value of the matrix
 ##      2. get the value of the matrix
@@ -33,7 +36,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Write a short comment describing this function:
 ## This function returns the inverse of the special matrix created with the above function.
 ## It returns the inverse calculating it only if it had  not already been calculated 
 ## (and stores it for future uses). Otherwise it simply returns the already stored value.
